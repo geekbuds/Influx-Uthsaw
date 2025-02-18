@@ -539,3 +539,45 @@ section > .news {
     }}
 
 
+    .sponsors {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #000;
+    }
+    
+    .sponsors h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        color: red;
+        text-transform: uppercase;
+    }
+    
+    .sponsor-category {
+        margin-bottom: 30px;
+    }
+    
+    .sponsor-category h3 {
+        font-size: 1.8rem;
+        color: #ffcc00; /* Change color as needed */
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+    
+    .sponsor-logos {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .sponsor-logos img {
+        max-width: 180px; /* Adjust logo size */
+        height: auto;
+        transition: transform 0.3s ease;
+        border-radius: 25px;
+    }
+    
+    .sponsor-logos img:hover {
+        transform: scale(1.1);
+    }
+    
