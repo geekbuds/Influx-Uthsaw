@@ -1,0 +1,541 @@
+
+    /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Neue', sans-serif;
+    /* background-color: #000; */
+    color: #fff;
+    /* line-height: 1.6; */
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.hero-logo {
+    width: 350px; /* Increase the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .hero-logo {
+        width: 150px; /* Adjust width for mobile screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+/* Hero Section */
+.hero {
+    background: url('/assets/img/bg.png') no-repeat center center/cover; /* Replace 'your-image.jpg' with your actual image path */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add a dark overlay for better text visibility */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Adjust opacity for darker effect */
+    z-index: 1;
+}
+
+.hero * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 6rem; /* Large title */
+    font-weight: bold;
+    margin-bottom: 20px;
+     font-family: 'Comic Neue', sans-serif;
+
+    color: #FF00FF; /* Neon Purple color */
+    text-shadow: 0 0 15px rgba(255, 0, 255, 0.2), 0 0 30px rgba(255, 0, 255, 0.3);
+}
+
+.hero h2 {
+    font-size: 2.5rem; /* Subheading font size */
+    margin-bottom: 15px;
+    color:#ffcc00; /* Neon Green color */
+    font-family: 'Comic Neue', sans-serif;
+
+    text-shadow: 0 0 10px  rgba(255, 204, 0, 0.3), 0 0 20px rgba(255, 204, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    text-transform: lowercase;
+    margin-bottom: 30px;
+    /* color: #ffcc00; Neon Yellow color */
+    /* text-shadow: 0 0 8px rgba(255, 204, 0, 0.7), 0 0 20px rgba(255, 204, 0, 0.7); */
+}
+
+/* Call to Action Button */
+.cta-btn {
+    background-color: #ffcc00; /* Neon Yellow background color */
+    color: #222; /* Dark text color for better contrast */
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.7), 0 0 20px rgba(255, 204, 0, 0.7); /* Neon Yellow text shadow */
+    padding: 12px 30px;
+    font-size: 1.8rem;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.cta-btn:hover {
+    background-color: #ff6699; /* Slightly lighter background on hover */
+    cursor: pointer;
+}
+
+
+.cta-btn:hover {
+    background-color:black;
+    color: #ffcc00;
+    border: 2px solid #ffcc00;
+    cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 5rem; /* Reduce title size on smaller screens */
+    }
+
+    .hero h2 {
+        font-size: 2rem; /* Reduce subheading size */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Adjust paragraph size */
+    }
+
+    .cta-btn {
+        font-size: 1.5rem; /* Smaller button font size */
+        padding: 10px 25px; /* Smaller button padding */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 4rem; /* Further reduce title size for mobile */
+    }
+
+    .hero h2 {
+        font-size: 1.8rem; /* Further reduce subheading size */
+    }
+
+    .hero p {
+        font-size: 1.1rem; /* Further adjust paragraph size */
+    }
+
+    .cta-btn {
+        font-size: 1.4rem; /* Further reduce button font size */
+        padding: 8px 20px; /* Further reduce button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 3rem; /* Reduce title size even more for very small screens */
+    }
+
+    .hero h2 {
+        font-size: 1.5rem; /* Adjust subheading size */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    .cta-btn {
+        font-size: 1.2rem; /* Smaller button font size */
+        padding: 8px 15px; /* Smaller button padding */
+    }
+}
+ /* Container Styling */
+ .countdown-container {
+      color: white;
+      margin: 0 auto;
+      text-align: center;
+      position: relative; /* Add relative positioning */
+      z-index: 10; /* Ensure it appears on top */
+      /* padding: 2rem;  Added padding for better spacing */
+    }
+    
+    /* Header Styling */
+    #headline {
+      color: white;  /* Set header color to white */
+      font-weight: normal;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 18px; /* Added base font-size */
+      margin-bottom: 20px; /* Space below heading */
+    }
+    
+    /* List Item Styling */
+    #countdown li {
+      color: white;  /* Set list item color to white */
+      display: inline-block;
+      font-size: 1.5em;
+      list-style-type: none;
+      padding: 1em;
+      text-transform: uppercase;
+      margin: 0 10px; /* Added margin for spacing between items */
+      position: relative; /* Add relative positioning */
+      z-index: 10; /* Ensure it appears on top */
+    }
+    
+    /* Countdown Span Styling */
+    #countdown li span {
+      color: teal;  /* Set countdown number color to white */
+      display: block;
+      font-size: 4.5rem;
+      font-weight: bold; /* Bold text for better readability */
+    }
+    
+ /* Responsive Design */
+@media all and (max-width: 768px) {
+    #countdown {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap; /* Prevents wrapping */
+        gap: 10px; /* Adjust spacing between items */
+    }
+
+    #countdown li {
+        font-size: 1rem; /* Adjusted font size */
+        padding: 0.5em; /* Adjusted padding */
+        margin: 0; /* Remove extra margin */
+        flex: 1; /* Ensures equal spacing */
+    }
+
+    #countdown li span {
+        font-size: 2rem; /* Adjusted countdown number size */
+    }
+}
+
+/* Extra small screens */
+@media all and (max-width: 480px) {
+    #countdown {
+        flex-wrap: wrap; /* Allow wrapping if space is too tight */
+    }
+
+    #countdown li {
+        font-size: 0.875rem;
+        padding: 0.3em;
+    }
+
+    #countdown li span {
+        font-size: 1.75rem;
+    }
+}
+
+/* General Styling for Location and Phone Section */
+.locations {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 10px; */
+    gap: 10px; /* Reduced gap between cards */
+    flex-wrap: wrap;
+    /* margin-bottom: 20px; */
+    background-color: #000;
+}
+
+/* Styling for Each Card */
+.location-card, .phone-card {
+    background-color: #000;
+    padding: 15px 20px;
+    border-radius: 8px;
+    width: 220px; /* Adjusted width for better alignment */
+    text-align: center;
+    border: 2px solid #ffcc00;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+/* Hover Effect */
+.location-card:hover, .phone-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Funky Fonts */
+.location-card, .phone-card {
+    font-family: 'Comic Neue', sans-serif;
+}
+
+/* Address and Phone Links Styling */
+.location-address a, .phone-number a {
+    font-family: 'Comic Neue', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Icon Styling */
+.location-icon, .phone-icon {
+    font-size: 2rem; /* Adjust icon size */
+    margin-bottom: 15px;
+    color:white; /* Icon color */
+}
+
+/* Hover Effect for Links */
+.location-address a:hover, .phone-number a:hover {
+    color: white;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .location-card, .phone-card {
+        width: 180px; /* Smaller width for mobile */
+        padding: 12px 15px;
+    }
+
+    .location-address a, .phone-number a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .location-card, .phone-card {
+        width: 150px; /* Even smaller width on very small screens */
+        padding: 10px;
+    }
+
+    .location-address a, .phone-number a {
+        font-size: 0.8rem;
+    }
+}
+/* General Styling for the Section */
+section {
+  background-color: teal;
+  color: white;
+  font-family: 'Comic Neue', sans-serif;
+  text-transform: uppercase;
+  overflow: hidden; /* Prevent scrolling bar */
+}
+
+/* Styling for the container holding the text */
+section > .news {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  min-width: 100%;
+}
+
+/* Styling for each scrolling message */
+.news-message {
+  display: flex;
+  
+  flex-shrink: 0; /* Prevent shrinking */
+  height: 50px;
+  align-items: center;
+  animation: slide-left 20s linear infinite;
+}
+
+/* Styling for the paragraph text */
+.news-message p {
+  font-size: 2.5em;
+  font-weight: 100;
+  padding-left: 0.5em;
+}
+
+/* Animation for the scrolling effect */
+@keyframes slide-left {
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  100% {
+    transform: translateX(-100%); /* End position */
+  }
+}
+
+/* Mobile-specific Styles */
+@media only screen and (max-width: 768px) {
+  /* Reduce the font size for better readability on small screens */
+  .news-message p {
+    font-size: 1.5em; /* Decrease font size */
+  }
+
+  /* Make the container fit the screen width */
+  section > .news {
+    min-width: 100%;
+  }
+
+  /* Adjust the scrolling speed for mobile */
+  .news-message {
+    animation: slide-left 15s linear infinite; /* Faster scrolling for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Further reduce the font size for smaller screens */
+  .news-message p {
+    font-size: 1.2em; /* Even smaller font size for very small screens */
+  }
+
+  /* Adjust the scrolling speed even more for very small screens */
+  .news-message {
+    animation: slide-left 10s linear infinite; /* Even faster scrolling */
+  }
+}
+
+/* General Styling for Event Gallery */
+.event-gallery {
+    padding: 40px;
+    background-color: #000;
+    color: white;
+    text-align: center;
+}
+
+/* Funky Heading */
+.event-heading {
+    font-family: 'Comic Neue', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: red;
+    text-transform: uppercase;
+}
+
+/* Event Cards Container */
+.event-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: stretch; /* Ensures cards are stretched equally */
+}
+
+/* Each Event Card */
+.event-card {
+    background-color: #ffcc00;
+    width: 250px; /* Slightly increased card width for better balance */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 360px; /* Fixed height for consistency */
+}
+
+/* Hover Effect */
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Funky Title */
+.event-title {
+    font-family: 'Comic Neue', sans-serif;
+    font-size: 1.5rem;
+    color: red;
+    /* margin-bottom: 15px; */
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Event Image Styling */
+.event-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures images fill the space without distortion */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+}
+
+/* Event Description */
+.event-description {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    padding: 0 10px;
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-card {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+        height: auto; /* Allow flexibility for small screens */
+    }
+
+    .event-description {
+        font-size: 0.9rem; /* Adjust description text size for small screens */
+    }
+    .event-heading{
+        font-size: 18px;
+    }
+}
+.registration {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.registration-heading {
+    font-size: 3rem;
+    font-family: 'Comic Neue', sans-serif;
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.registration-subtext {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
+.site-footer {
+    background-color: #111;
+    color: rgba(255, 255, 255, 0.6); /* Light text color */
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 1rem;
+    motion-path: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.site-footer a {
+    color: rgba(255, 255, 255, 0.8); /* Slightly brighter for contrast */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.site-footer a:hover {
+    color: #ffcc00; /* Highlight on hover */
+}
+@media (max-width: 768px) {
+    .registration-heading{
+        font-size: 28px;
+    }}
+
+
