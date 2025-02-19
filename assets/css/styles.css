@@ -537,7 +537,6 @@ section > .news {
     .registration-heading{
         font-size: 28px;
     }}
-
 /* General Styling for Sponsor Gallery */
 .sponsor-gallery {
     padding: 40px;
@@ -566,7 +565,7 @@ section > .news {
 
 /* Each Sponsor Card */
 .sponsor-card {
-    background-color:#ffcc00;
+    background-color: #ffcc00;
     width: 280px; /* Adjust width for better fit */
     padding: 20px;
     border-radius: 10px;
@@ -577,7 +576,7 @@ section > .news {
     flex-direction: column;
     justify-content: space-between;
     align-items: center; /* Aligns content centrally */
-    height:390px; /* Increased height for better spacing */
+    height: 390px; /* Increased height for better spacing */
 }
 
 /* Hover Effect */
@@ -643,7 +642,7 @@ section > .news {
     background-color: #cc0000;
 }
 
-/* Responsive Design */
+/* Responsive Design for Tablets & Small Screens (max-width: 768px) */
 @media (max-width: 768px) {
     .sponsor-cards {
         flex-direction: column;
@@ -672,107 +671,169 @@ section > .news {
     }
 }
 
-
-      /* Meet the Host Section */
-      #meet-the-host {
-        text-align: center;
-        padding: 60px 20px;
-        background:#000;
+/* Full Mobile Optimization (max-width: 480px) */
+@media (max-width: 480px) {
+    .sponsor-gallery {
+        padding: 30px 15px;
     }
 
-    .container {
-        max-width: 1100px;
-        margin: 0 auto;
-    }
-
-    h2 {
-        font-size: 32px;
+    .sponsor-heading {
+        font-size: 1.8rem;
         margin-bottom: 20px;
-        color: #ffcc00;
     }
 
+    .sponsor-card {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px;
+        height: auto; /* Adjust height dynamically */
+    }
+
+    .sponsor-card img {
+        max-width: 150px; /* Smaller for compact screens */
+        height: 120px;
+    }
+
+    .sponsor-title {
+        font-size: 18px;
+    }
+
+    .sponsor-type {
+        font-size: 0.9rem;
+    }
+
+    .sponsor-description {
+        font-size: 0.85rem;
+        padding: 0 8px;
+    }
+
+    .view-profile {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+
+   /* Meet the Host Section */
+#meet-the-host {
+    text-align: center;
+    padding: 60px 20px;
+    background: #000;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+.host-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.host-profile img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10%;
+    object-fit: cover;
+    border: 2px solid;
+}
+
+.host-details {
+    max-width: 500px;
+}
+
+.host-details h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: red;
+}
+
+.host-details p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-transform: none;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #ffcc00;
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #000;
+    border: 2px solid #ffcc00;
+    color: #ffcc00;
+}
+
+/* Responsive Design for Tablets & Small Screens (max-width: 768px) */
+@media (max-width: 768px) {
     .host-profile {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-        flex-wrap: wrap;
-        text-align: left;
+        flex-direction: column;
+        text-align: center;
     }
 
     .host-profile img {
-        width: 250px;
-        height: 250px;
-        border-radius:10%;
-        object-fit: cover;
-        border: 2px solid;
+        width: 150px;
+        height: 150px;
     }
 
     .host-details {
-        max-width: 500px;
+        text-align: center;
+    }
+}
+
+/* Full Mobile Optimization (max-width: 480px) */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 26px;
+    }
+
+    .host-profile {
+        gap: 20px; /* Reduce spacing */
+    }
+
+    .host-profile img {
+        width: 130px; /* Adjust image size */
+        height: 130px;
+    }
+
+    .host-details {
+        max-width: 90%; /* Adjust content width */
+        padding: 0 10px;
     }
 
     .host-details h3 {
-        font-size: 26px;
-        margin-bottom: 10px;
-        color: red;
+        font-size: 22px;
     }
 
     .host-details p {
-        font-size: 16px;
-        line-height: 1.6;
-        text-transform: none;
+        font-size: 14px;
+        line-height: 1.5;
     }
 
     .btn {
-        display: inline-block;
-        margin-top: 15px;
-        padding: 12px 25px;
-        background: #ffcc00;
-        color: #000;
-        font-size: 16px;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: 0.3s ease;
+        font-size: 14px;
+        padding: 10px 20px;
     }
-
-    .btn:hover {
-        background: #000;
-        border: 2px solid #ffcc00;
-        color: #ffcc00;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .host-profile {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .host-profile img {
-            width: 150px;
-            height: 150px;
-        }
-
-        .host-details {
-            text-align: center;
-        }
-    }
-
-    @media (max-width: 480px) {
-        h2 {
-            font-size: 26px;
-        }
-
-        .host-details h3 {
-            font-size: 22px;
-        }
-
-        .btn {
-            font-size: 14px;
-            padding: 10px 20px;
-        }
-    }
+}
 
     /* Powered By Section */
     #powered-by {
@@ -839,3 +900,33 @@ section > .news {
             align-items: center;
         }
     }
+/* Responsive Design for Mobile Screens */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 26px;
+    }
+
+    .partner-box {
+        max-width: 90%; /* Adjust width for better mobile fit */
+        padding: 15px;
+    }
+
+    .partner-box img {
+        width: 120px; /* Slightly smaller for mobile screens */
+        height: 120px;
+    }
+
+    .partner-details h3 {
+        font-size: 20px;
+    }
+
+    .partner-details p {
+        font-size: 13px;
+        padding: 0 5px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 8px 18px;
+    }
+}
